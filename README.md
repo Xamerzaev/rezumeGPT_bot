@@ -1,44 +1,66 @@
-# OpenAI API Quickstart - Python example app
+# RezumeGPT_bot
 
-This is an example pet name generator app used in the OpenAI API [quickstart tutorial](https://beta.openai.com/docs/quickstart). It uses the [Flask](https://flask.palletsprojects.com/en/2.0.x/) web framework. Check out the tutorial or follow the instructions below to get set up.
+![RezumeGPT_bot](https://i.imgur.com/3JcB7fT.png)
 
-## Setup
+## Описание проекта
 
-1. If you don’t have Python installed, [install it from here](https://www.python.org/downloads/).
+RezumeGPT_bot - это Telegram-бот, который использует модель GPT-3 от OpenAI для генерации резюме на основе введенных пользователем данных. Бот предлагает пользователю ответить на несколько вопросов, связанных с опытом работы и образованием, а затем генерирует резюме на основе этих ответов.
 
-2. Clone this repository.
+## Требования к установке
 
-3. Navigate into the project directory:
+Для запуска проекта необходимо установить следующие зависимости:
 
-   ```bash
-   $ cd openai-quickstart-python
-   ```
+- Python 3.6+
+- Flask
+- python-dotenv
+- requests
+- python-telegram-bot
+- openai
 
-4. Create a new virtual environment:
+## Установка и запуск
 
-   ```bash
-   $ python -m venv venv
-   $ . venv/bin/activate
-   ```
+1. Склонируйте репозиторий:
 
-5. Install the requirements:
+```
+git clone https://github.com/mahamerz/RezumeGPT_bot.git
+```
 
-   ```bash
-   $ pip install -r requirements.txt
-   ```
+2. Создайте файл `.env` на основе `.env.example` и заполните его своими данными для OpenAI API и Telegram API.
 
-6. Make a copy of the example environment variables file:
+3. Установите зависимости:
 
-   ```bash
-   $ cp .env.example .env
-   ```
+```
+pip install -r requirements.txt
+```
 
-7. Add your [API key](https://beta.openai.com/account/api-keys) to the newly created `.env` file.
+4. Запустите приложение:
 
-8. Run the app:
+```
+python app.py
+```
 
-   ```bash
-   $ flask run
-   ```
+5. Откройте бота в Telegram и начните использование.
 
-You should now be able to access the app at [http://localhost:5000](http://localhost:5000)! For the full context behind this example app, check out the [tutorial](https://beta.openai.com/docs/quickstart).
+## Пример использования
+
+1. Найдите бота в Telegram по имени @RezumeGPT_bot.
+
+2. Нажмите кнопку "Start" или отправьте команду /start.
+
+![Start](https://i.imgur.com/0KwW8Pz.png)
+
+3. Ответьте на несколько вопросов, связанных с опытом работы и образованием.
+
+![Questions](https://i.imgur.com/5Z5j2QJ.png)
+
+4. Получите сгенерированное резюме на основе введенных данных.
+
+![Resume](https://i.imgur.com/r7vHb3e.png)
+
+## Автор
+
+Mahamerz - Мансур Хамерзаев. Запрещается использование кода в коммерческих условиях.
+
+## Лицензия
+
+Этот проект находится под лицензией [MIT](https://opensource.org/licenses/MIT).
